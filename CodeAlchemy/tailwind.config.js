@@ -9,8 +9,13 @@ export default {
       Highlight : '	#AAFF00',
       Menu : '#B6FA8E'
     },
+    fontFamily:{
+      Grotesk : ["Space Grotesk", 'sans-serif'],
+    },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ preferredStrategy: 'pseudoelements' }),
+  ],
 }
 
