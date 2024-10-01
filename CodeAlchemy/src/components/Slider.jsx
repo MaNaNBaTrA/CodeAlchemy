@@ -45,21 +45,21 @@ const Slider = () => {
   return (
     <div className='flex  justify-center w-full'>
     <div className='mt-14 w-[90%] overflow-hidden px-6 justify-self-center max-[1024px]:w-[90%]'>
-        <div ref={SliderRef}  className='h-20 flex gap-16 items-center justify-center'>
-            <span ><img src={Html} alt="Img" className='h-[80px] min-w-[60px]'/></span>
-            <span><img src={Css} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Js} alt="Img" className='h-[80px] min-w-[60px]'/></span>
-            <span><img src={ReactImg} alt="Img" className='h-[80px] min-w-[60px]'  /></span>
-            <span><img src={Node} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Express} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Mongo} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Git} alt="Img" className='h-[80px] min-w-[60px] relative top-3' /></span>
-            <span><img src={Tailwind} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Vite} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Postman} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Gsap} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Next} alt="Img" className='h-[80px] min-w-[60px]' /></span>
-            <span><img src={Github} alt="Img" className='h-[80px] min-w-[60px] relative top-2' /></span>
+        <div ref={SliderRef}  className='h-24 flex gap-16 items-center justify-center'>
+            <span ><img src={Html} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]'/></span>
+            <span><img src={Css} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]' /></span>
+            <span><img src={Js} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]'/></span>
+            <span><img src={ReactImg} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]'  /></span>
+            <span><img src={Node} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]' /></span>
+            <span><img src={Express} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]' /></span>
+            <span><img src={Mongo} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]' /></span>
+            <span><img src={Git} alt="Img" className='h-[100px] min-w-[80px] relative top-3 max-[469px]:min-w-[60px] max-[469px]:top-5' /></span>
+            <span><img src={Tailwind} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]' /></span>
+            <span><img src={Vite} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]' /></span> 
+            <span><img src={Postman} alt="Img" className='h-[100px] min-w-[100px] max-[469px]:min-w-[80px]' /></span>
+            <span><img src={Gsap} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]' /></span>
+            <span><img src={Next} alt="Img" className='h-[100px] min-w-[80px] max-[469px]:min-w-[60px]' /></span>
+            <span><img src={Github} alt="Img" className='h-[100px] min-w-[80px] relative top-3 max-[469px]:min-w-[60px] max-[469px]:top-5' /></span>
         </div>
     </div>
     </div>
