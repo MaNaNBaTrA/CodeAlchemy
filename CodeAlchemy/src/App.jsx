@@ -1,3 +1,5 @@
+import Footer from './components/Footer';
+import ContactForm from './components/Form';
 import Header from './components/Header';
 import Navbar from './components/Navbar'
 import Project from './components/Project';
@@ -19,6 +21,7 @@ function App() {
       <Work/>
       <Project/>
       <Projects/>
+      <Footer/>
     </>
   )
 

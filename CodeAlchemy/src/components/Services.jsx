@@ -25,8 +25,8 @@ const Services = () => {
                     </div>       
                     <div className='flex border-solid border-black border-2 pl-4 py-4 rounded-3xl w-[45%] max-[912px]:w-[47%] max-[746px]:w-[60%] max-[604px]:w-[80%] max-[540px]:w-[95%] max-[425px]:w-[100%] shadow-Service'>
                         <div className='flex flex-col gap-y-4 '>
-                            <div className='bg-Menu flex self-start rounded-md p-1 min-[1184px]:text-xl min-[1184px]:p-2 text-nowrap'>Responsive Dev</div>
-                            <div className='text-sm max-[840px]:text-xs min-[1184px]:text-lg max-[425px]:text-[10px]'>Responsive Dev ensures visually engaging designs that adapt seamlessly across devices, enhancing user experience while maintaining brand identity. Tailored solutions that drive results and engagement.</div>
+                            <div className='bg-Menu flex self-start rounded-md p-1 min-[1184px]:text-xl min-[1184px]:p-2 text-nowrap'>Responsive Web</div>
+                            <div className='text-sm max-[840px]:text-xs min-[1184px]:text-lg max-[425px]:text-[10px]'>Responsive design ensures visually engaging designs that adapt seamlessly across devices, enhancing user experience while maintaining brand identity. Tailored solutions that drive results and engagement.</div>
                         </div>
                         <div className='w-full h-auto min-w-[140px] min-[1184px]:min-w-[180px] min-[1184px]:max-w-[224px] max-[746px]:max-w-[160px] max-[425px]:min-w-[110px] mt-5'><img src={Responsive} alt="" /></div>
                     </div>       

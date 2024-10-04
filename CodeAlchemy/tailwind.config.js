@@ -10,7 +10,9 @@ export default {
       Menu: '#B6FA8E',
       Work: '#f3f3f3',
       White:'#FFFFFF',
-      Black:'#000000'
+      Black:'#000000',
+      green: '#4BB543',  
+      red: '#ef4444',
     },
     fontFamily: {
       Grotesk: ["Space Grotesk", 'sans-serif'],
