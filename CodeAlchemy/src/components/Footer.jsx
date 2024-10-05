@@ -36,9 +36,9 @@ const Footer = () => {
 
     return (
         <>
-            <div className='w-full mt-20 bg- overflow-hidden rounded-t-3xl max-h-fit bg-Work'>
-                <div className='w-full flex px-12'>
-                    <div className='w-1/2 flex flex-col text-Black font-Grotesk'>
+            <div className='w-full mt-20 bg- overflow-hidden rounded-t-3xl max-h-fit bg-Work max-[700px]:mt-0'>
+                <div className='w-full flex px-12 max-[900px]:flex-col '>
+                    <div className='w-1/2 flex flex-col text-Black font-Grotesk max-[900px]:w-full'>
                         <div className='text-5xl mt-16 mb-8'>Get in <span className='underline underline-offset-4 decoration-Highlight '>Touch</span>.</div>
                         <div className='text-wrap text-lg'>Have a project in mind or need assistance? I'm here to help! Feel free to reach out, and let's create something amazing together. Whether it's a simple question or a detailed inquiry, I'll get back to you as soon as possible.</div>
                         <div className='flex mt-8 gap-6'>
@@ -64,7 +64,7 @@ const Footer = () => {
                                 </div>
                             </a></div>
                     </div>
-                    <div className='w-1/2'>
+                    <div className='w-1/2 max-[900px]:w-full'>
                         <div className="w-[75%] mx-auto p-4 text-Black">
                             <h2 className="text-2xl font-semibold mb-4 text-center">Contact Us</h2>
                             {error && <p className="text-red text-xl ">{error}</p>}
@@ -106,7 +106,7 @@ const Footer = () => {
                                         required
                                     ></textarea>
                                 </div>
-                                <div className="flex justify-center items-center">
+                                <div className="flex justify-center items-center text-nowrap">
                                     <button
                                         type="submit"
                                         className="bg-Menu text-white py-2 px-8 rounded-md "
@@ -118,9 +118,12 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+                <div className='text-center mt-4  mb-6 text-sm  text-Text'>
+                    © 2024 CodeAlchemy. All Rights Reserved.
+                </div>
             </div>
         </>
     )
 }
 
-export default Footer
+export default Footer;

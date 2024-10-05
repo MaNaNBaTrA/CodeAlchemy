@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Bike from "../assets/Projects/BikePalace.png";
 import Blog from "../assets/Projects/Blog.png";
 import Booking from "../assets/Projects/Booking.png";
@@ -6,11 +8,37 @@ import Book from "../assets/Projects/BookStore.png";
 import Port from "../assets/Projects/Portfolio.png";
 import Github from '/Svg/Github.svg';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Projects = () => {
   const [active, setActive] = useState(2);
   const [Tran, setTran] = useState(15);
   const [Position, setPosition] = useState("");
   const itemsRef = useRef([]);
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const element = containerRef.current;
+
+    gsap.fromTo(
+      element,
+      { opacity: 0, y: 100 }, 
+      {
+        opacity: 1, 
+        y: 0, 
+        duration: 1.5, 
+        ease: 'power2.out', 
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 95%', 
+          end: 'bottom 30%', 
+          scrub: 0.5, 
+          markers: false, 
+        },
+      }
+    );
+  }, []);
 
   const items = [
     { title: "Bike Palace", img: Bike, source: "https://github.com/MaNaNBaTrA/Bike-Palace" },
@@ -23,7 +51,6 @@ const Projects = () => {
   const loadShow = () => {
     let stt = 0;
 
-    // Reset all styles for the active element
     if (itemsRef.current[active]) {
       itemsRef.current[active].style.transform = "none";
       itemsRef.current[active].style.zIndex = 1;
@@ -31,7 +58,6 @@ const Projects = () => {
       itemsRef.current[active].style.opacity = 1;
     }
 
-    // Move and style the elements to the right of the active element
     for (let i = active + 1; i < items.length; i++) {
       stt++;
       if (itemsRef.current[i]) {
@@ -42,7 +68,6 @@ const Projects = () => {
       }
     }
 
-    // Move and style the elements to the left of the active element
     stt = 0;
     for (let i = active - 1; i >= 0; i--) {
       stt++;
@@ -55,26 +80,22 @@ const Projects = () => {
     }
   };
 
-  // Use Effect to apply styles whenever `active` or `Tran` changes
   useEffect(() => {
     loadShow();
   }, [active, Tran]);
 
-  // Next Slide function
   const nextSlide = () => {
     if (active + 1 < items.length) {
       setActive((prevActive) => prevActive + 1);
     }
   };
 
-  // Previous Slide function
   const prevSlide = () => {
     if (active - 1 >= 0) {
       setActive((prevActive) => prevActive - 1);
     }
   };
 
-  // Force Repaint or Reflow in case of rendering issues
   useEffect(() => {
     const forceRepaint = () => {
       document.body.style.overflow = 'hidden';
@@ -83,10 +104,9 @@ const Projects = () => {
       });
     };
 
-    forceRepaint(); // Trigger it whenever active changes
+    forceRepaint(); 
   }, [active]);
 
-  // Handle Resize for Dynamic Position and Transform changes
   useEffect(() => {
     const handleResize = () => {
       const screenX = window.innerWidth;
@@ -139,8 +159,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="relative mt-16 mb-20 w-full overflow-hidden max-[620px]:mt-12">
-      <div className="relative w-full h-[400px] overflow-hidden">
+    <div className="relative mt-16 mb-10 w-full overflow-hidden max-[620px]:mt-12 max-[700px]:mb-0" ref={containerRef}>
+      <div className="relative w-full h-[300px] overflow-hidden">
         {items.map((item, index) => (
           <div
             key={index}
@@ -163,7 +183,7 @@ const Projects = () => {
         <div
           id="prev"
           onClick={prevSlide}
-          className={`absolute left-0 bg-Black text-2xl w-12 h-12 flex rounded-full shadow-lg text-White items-center justify-center p-1 top-[40%] z-10 max-[860px]:top-[35%] max-[640px]:top-[30%] max-[540px]:top-[25%] max-[425px]:w-8 max-[425px]:h-8 max-[425px]:text-xl m-2 max-[768px]:w-10 max-[768px]:h-10 max-[768px]:text-xl ${
+          className={`absolute left-0 bg-Work text-2xl w-12 h-12 flex rounded-full shadow-lg text-Black items-center justify-center p-1 top-[40%] z-10 max-[860px]:top-[35%] max-[640px]:top-[30%] max-[540px]:top-[25%] max-[425px]:w-8 max-[425px]:h-8 max-[425px]:text-xl m-2 max-[768px]:w-10 max-[768px]:h-10 max-[768px]:text-xl ${
             active - 1 < 0 ? "cursor-not-allowed" : "cursor-pointer"
           }`}
         >
@@ -172,7 +192,7 @@ const Projects = () => {
         <div
           id="next"
           onClick={nextSlide}
-          className={`absolute right-0 bg-Black flex items-center justify-center text-2xl w-12 h-12 rounded-full shadow-lg text-White p-1 top-[40%] z-10 max-[860px]:top-[35%] max-[640px]:top-[30%] max-[540px]:top-[25%] max-[425px]:w-8 max-[425px]:h-8 max-[425px]:text-xl m-2 max-[768px]:w-10 max-[768px]:h-10 max-[768px]:text-xl ${
+          className={`absolute right-0 bg-Work flex items-center justify-center text-2xl w-12 h-12 rounded-full shadow-lg text-Black p-1 top-[40%] z-10 max-[860px]:top-[35%] max-[640px]:top-[30%] max-[540px]:top-[25%] max-[425px]:w-8 max-[425px]:h-8 max-[425px]:text-xl m-2 max-[768px]:w-10 max-[768px]:h-10 max-[768px]:text-xl ${
             active + 1 >= items.length ? "cursor-not-allowed" : "cursor-pointer"
           }`}
         >
