@@ -23,7 +23,7 @@ const Projects = () => {
 
     gsap.fromTo(
       element,
-      { opacity: 0, y: 100 }, 
+      { opacity: 0, y: 100}, 
       {
         opacity: 1, 
         y: 0, 
@@ -159,13 +159,13 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="relative mt-16 mb-10 w-full overflow-hidden max-[620px]:mt-12 max-[700px]:mb-0" ref={containerRef}>
-      <div className="relative w-full h-[300px] overflow-hidden">
+    <div className=" mt-16 w-full overflow-hidden h-[400px] max-[700px]:h-[340px] mb-4 max-[550px]:h-[300px] max-[400px]:h-[270px]" ref={containerRef}>
+      <div className="relative w-full overflow-hidden h-full ">
         {items.map((item, index) => (
           <div
             key={index}
             ref={(el) => (itemsRef.current[index] = el)}
-            className="absolute h-[600px] text-justify rounded-lg p-5 transition-all duration-500 flex flex-col max-[1600px]:w-[45%] min-[1600px]:w-[47%] max-w-[490px] max-[980px]:min-w-[480px] max-[780px]:w-[60%] max-[680px]:w-[65%] max-[680px]:min-w-[320px] max-[480px]:min-w-[320px] max-[400px]:min-w-[280px] max-[365px]:min-w-[240px]"
+            className="absolute h-[300px] text-justify rounded-lg p-5 transition-all duration-500 flex flex-col max-[1600px]:w-[45%] min-[1600px]:w-[47%] max-w-[490px] max-[980px]:min-w-[480px] max-[780px]:w-[60%] max-[680px]:w-[65%] max-[680px]:min-w-[320px] max-[480px]:min-w-[320px] max-[400px]:min-w-[280px] max-[365px]:min-w-[240px]"
             style={{ left: Position, top: 0, willChange: "transform, opacity" }}
           >
             <h1 className="text-xl mb-2 font-Grotesk max-[586px]:text-lg">{item.title}</h1>
