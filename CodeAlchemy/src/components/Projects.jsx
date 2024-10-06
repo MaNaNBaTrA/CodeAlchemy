@@ -159,7 +159,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className=" mt-16 w-full overflow-hidden h-[400px] max-[700px]:h-[340px] mb-4 max-[550px]:h-[300px] max-[400px]:h-[270px]" ref={containerRef}>
+    <div className=" mt-16 w-full overflow-hidden h-[400px] max-[700px]:h-[340px] mb-4 max-[550px]:h-[300px] max-[400px]:h-[270px]" ref={containerRef} >
       <div className="relative w-full overflow-hidden h-full ">
         {items.map((item, index) => (
           <div

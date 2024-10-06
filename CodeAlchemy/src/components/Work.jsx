@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   const containerRef = useRef(null);
+  const email = import.meta.env.VITE_EMAIL;
 
   useEffect(() => {
     const element = containerRef.current;
@@ -34,7 +35,7 @@ const Work = () => {
 
   return (
     <>
-      <div className='w-full px-12'>
+      <div className='w-full px-12' id='hire'>
         <div
           ref={containerRef}
           className='w-full mt-12 mb-4 flex bg-Work rounded-3xl pl-12 pr-2 p-1 max-[600px]:flex-col max-[600px]:px-0 max-[600px]:pr-0'
@@ -51,8 +52,8 @@ const Work = () => {
               Get in touch today to explore my web development services. For a detailed overview of my skills and experience, feel free to view my resume.
             </div>
             <div className='flex bg-black gap-6 mt-12 items-stretch mb-4 max-[600px]:pl-6 max-[320px]:pr-1 flex-wrap max-[1200px]:mt-8'>
-              <span className='text-White bg-Black flex p-1 px-2 rounded-xl cursor-pointer text-2xl max-[600px]:text-lg '>
-                Contact
+              <span className='text-White bg-Black flex p-1 px-2 rounded-xl cursor-pointer text-2xl max-[600px]:text-lg '><a href={`mailto:${email}`} target="_blank">
+                Contact</a>
               </span>
               <a
                 href={Resume}

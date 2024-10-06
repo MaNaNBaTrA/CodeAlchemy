@@ -18,7 +18,7 @@ function App() {
       <Service/>
       <Services/>
       <Work/>
-      <Project/>
+      <Project  />
       <Projects/>
       <Footer/>
     </>

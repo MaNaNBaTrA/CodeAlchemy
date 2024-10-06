@@ -4,7 +4,7 @@ import HeaderImg from '/Svg/Header.svg'
 const Header = () => {
   return (
     <>
-    <div className='w-full'>
+    <div className='w-full' id='about'>
         <div className='w-full flex px-12 mt-8 max-[678px]:flex-col max-[770px]:px-8 max-[678px]:justify-center max-[678px]:items-center max-[468px]:mt-6'>
             <div className='w-1/2 flex flex-col px-2 gap-6 py-5 max-[1024px]:gap-4 max-[984px]:gap-3 max-[678px]:w-full max-[678px]:justify-center max-[678px]:pt-3 max-[678px]:gap-6 6 text-Text'>
                 <span className='font-light font-Grotesk text-5xl max-[1024px]:text-5xl max-[984px]:text-4xl max-[792px]:text-3xl max-[678px]:text-5xl max-[468px]:text-4xl'>Where <span className='underline decoration-Highlight underline-offset-4'> Code </span> Transforms, and <span className='underline underline-offset-4 decoration-Highlight '>Ideas</span> Come to Life.</span>

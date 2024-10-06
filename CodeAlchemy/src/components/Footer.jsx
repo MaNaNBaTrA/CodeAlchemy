@@ -63,7 +63,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className='w-full mt-20 bg- overflow-hidden rounded-t-3xl max-h-fit bg-Work max-[700px]:mt-16' ref={containerRef} >
+            <div className='w-full mt-20 bg- overflow-hidden rounded-t-3xl max-h-fit bg-Work max-[700px]:mt-16' ref={containerRef} id='contact' >
                 <div className='w-full flex px-12 max-[900px]:flex-col '>
                     <div className='w-1/2 flex flex-col text-Black font-Grotesk max-[900px]:w-full'>
                         <div className='text-5xl mt-16 mb-8'>Get in <span className='underline underline-offset-4 decoration-Highlight '>Touch</span>.</div>
