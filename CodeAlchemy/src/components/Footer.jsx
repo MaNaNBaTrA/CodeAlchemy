@@ -47,7 +47,7 @@ const Footer = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3000/send', {
+            const response = await axios.post('code-alchemy-green.vercel.app/send', {
                 name,
                 email,
                 message,
