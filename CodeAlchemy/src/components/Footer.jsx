@@ -52,12 +52,12 @@ const Footer = () => {
                 email,
                 message,
             });
-            setSuccess('Email sent successfully!');
+            setSuccess('Sent successfully!');
             setName('');
             setEmail('');
             setMessage('');
         } catch (err) {
-            setError('Error sending email. Please try again later.');
+            setError('Error sending. Please try again later.');
         }
     };
 
