@@ -45,7 +45,7 @@ const Projects = () => {
     { title: "Blog Website", img: Blog, source: "https://github.com/MaNaNBaTrA/Blog-Web" },
     { title: "Art In Motion", img: Port, source: "https://github.com/MaNaNBaTrA/Art-In-Motion" },
     { title: "Books Library", img: Book, source: "https://github.com/MaNaNBaTrA/Books-Library" },
-    { title: "Booking.com", img: Booking, source: "https://github.com/MaNaNBaTrA/Booking-App" }
+    { title: "Booking.com", img: Booking, source: "https://github.com/MaNaNBaTrA/Booking-App-FullStack" }
   ];
 
   const loadShow = () => {
